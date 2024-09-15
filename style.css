@@ -2,14 +2,14 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Asegura que html y body ocupen toda la altura */
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     color: #000;
     background-color: #fff;
-    overflow-x: hidden; /* Evitar el desbordamiento horizontal */
+    overflow-x: hidden; /* Avoid horizontal overflow */
     display: flex;
     flex-direction: column;
 }
@@ -24,8 +24,8 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agregar sombra para mayor visibilidad */
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .nav-container {
@@ -63,15 +63,15 @@ body {
 /* Hero section styles */
 .hero {
     position: relative;
-    height: calc(100vh - 60px); /* Ajusta la altura para no cubrir el navbar */
-    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
-    margin-top: 60px; /* Espacio para el navbar fijo */
+    height: calc(100vh - 60px); /* Adjust height to avoid navbar overlap */
+    overflow: hidden;
+    margin-top: 60px; /* Space for fixed navbar */
 }
 
 .hero-image {
     width: 100%;
-    height: 100%; /* Asegura que la imagen cubra toda la sección hero */
-    object-fit: cover; /* Mantiene la proporción de la imagen y cubre el área */
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -82,7 +82,7 @@ body {
     transform: translate(-50%, -50%);
     color: #fff;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     border-radius: 10px;
     text-align: center;
 }
@@ -103,14 +103,11 @@ body {
     text-align: center;
 }
 
-
-
-
 /* Form Styles */
 .order-form {
     padding: 20px;
     text-align: center;
-    flex: 1; /* Ocupa el espacio restante */
+    flex: 1; /* Occupy the remaining space */
 }
 
 .form-container {
@@ -142,6 +139,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 button:hover {
@@ -173,6 +171,7 @@ button:hover {
     color: #fff;
     padding: 5px 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .pedido-resumen button.eliminar-btn:hover {
@@ -191,23 +190,22 @@ button:hover {
     padding: 20px;
     text-align: center;
     width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 .footer-container {
     max-width: 800px;
     margin: 0 auto;
-    
 }
 
 .footer p {
     margin: 10px 0;
     font-size: 16px;
-    justify-content: space-between;
 }
 
 .footer-link {
     text-decoration: none;
-    color: #fff; /* Color del texto de los enlaces */
+    color: #fff;
     font-weight: bold;
 }
 
@@ -216,10 +214,10 @@ button:hover {
 }
 
 .footer-link:hover {
-    color: #097429; /* Color al pasar el ratón por encima */
+    color: #097429;
 }
 
-
+/* Product section styles */
 .productos {
     padding: 20px;
 }
@@ -239,14 +237,17 @@ button:hover {
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
-    gap: 200px; /* Espacio entre imagen y texto */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure items wrap in smaller viewports */
 }
 
 .producto img {
-    max-width: 150px; /* Limita el tamaño máximo de la imagen */
+    max-width: 150px;
     height: auto;
-    object-fit: cover; /* Mantiene la proporción de la imagen */
-    border-radius: 8px; /* Bordes redondeados para la imagen */
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .producto-info {
@@ -261,7 +262,7 @@ button:hover {
 .producto-info p {
     margin: 5px 0;
     color: #666;
-    line-height: 1.5; /* Mejora la legibilidad del texto */
+    line-height: 1.5;
 }
 
 .producto-info span {
@@ -270,7 +271,7 @@ button:hover {
     margin-top: 5px;
 }
 
-/* Estilos para el formulario de cliente */
+/* Customer info form styles */
 .customer-info {
     background-color: #f9f9f9;
     padding: 20px;
@@ -305,21 +306,56 @@ button:hover {
 }
 
 .customer-info button {
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
     padding: 10px 20px;
     border: none;
-
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .customer-info button:hover {
-    background-color: #000000;
+    background-color: #444;
 }
 
+/* Error message styles */
 .error-msg {
     color: #ff0000;
     font-size: 14px;
     margin-top: 10px;
-    display: none; /* Ocultar el mensaje por defecto */
+    display: none; /* Hidden by default */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-title {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .producto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
 }
