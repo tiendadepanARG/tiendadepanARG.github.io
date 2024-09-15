@@ -51,8 +51,8 @@ body {
 
 .nav-links a {
     color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a:hover {
@@ -328,34 +328,18 @@ button:hover {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .nav-title {
-        font-size: 20px;
-    }
-
     .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        align-items: right;
+        text-align: center;
     }
 
     .nav-links a {
         margin: 10px 0;
+        display: block;
     }
 
-    .hero-text h1 {
-        font-size: 2em;
-    }
-
-    .hero-text p {
-        font-size: 1em;
-    }
-
-    .producto {
+    .nav-logo {
         flex-direction: column;
         align-items: center;
-    }
-
-    .footer {
-        font-size: 14px;
     }
 }
