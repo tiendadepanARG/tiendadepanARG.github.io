@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arma tu Pedido - Tienda de Pan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><img src="/img/pan-icono.png" alt="Icono de Tienda de Pan" class="nav-icon"></a>
+                <span class="nav-title">Tienda de Pan</span>
+            </div>
+            <div class="nav-links">
+                <a href="productos.html">Productos</a>
+                <a href="armar-pedido.html">Arma tu Pedido</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulario de Pedido -->
+    <section class="order-form">
+        <div class="form-container">
+            <h1>Arma tu Pedido</h1>
+            <form id="pedido-form">
+                <div class="form-group">
+                    <label for="producto">Selecciona un producto:</label>
+                    <select id="producto" name="producto">
+                        <option value="molde" data-price="3.000">Molde - $3.000</option>
+                        <option value="molde-integral" data-price="3.500">Molde Integral - $3.500</option>
+                        <option value="ciabatta" data-price="3.200">Ciabatta - $3.200</option>
+                        <option value="pan-pita" data-price="3.000">Pan Pita - $3.000</option>
+                        <option value="baguette" data-price="2.000">Baguette - $2.000</option>
+                        <option value="burguer-semola" data-price="2.700">Burguer Sémola - $2.700</option>
+                        <option value="burguer-papa" data-price="3.000">Burguer Papa - $3.000</option>
+                        <option value="brioche" data-price="4.000">Brioche - $4.000</option>
+                        <option value="baguel" data-price="3.000">Baguel - $3.000</option>
+                        <option value="focaccia" data-price="4.000">Focaccia - $4.000</option>
+
+                        <option value="crumble-manzana" data-price="2.200">Crumble de Manzana - $2.200</option>
+                        <option value="lemon-pie" data-price="2.200">Lemon Pie - $2.200</option>
+                        <option value="carrot-cake" data-price="2.200">Carrot Cake - $2.200</option>
+                        <option value="brownie" data-price="2.500">Brownie - $2.500</option>
+                        <option value="red-velvet" data-price="2.500">Red Velvet - $2.500</option>
+                        <option value="torta-matilda" data-price="3.000">Torta Matilda - $3.000</option>
+                        <option value="budin-limon-amapolas" data-price="3.000">Budín de Limón y Amapolas - $3.000
+                        </option>
+                        <option value="budin-banana-chips" data-price="3.000">Budín de Banana con Chips de Chocolate -
+                            $3.000</option>
+                        <option value="budin-chocolate-chips" data-price="3.000">Budín de Chocolate con Chips - $3.000
+                        </option>
+
+                        <option value="sorrentinos" data-price="5.800">Sorrentinos - $5.800</option>
+                        <option value="ravioles" data-price="5.400">Ravioles - $5.400</option>
+                        <option value="spaghetti" data-price="3.000">Spaghetti - $3.000</option>
+                        <option value="fetucchini" data-price="3.000">Fetucchini - $3.000</option>
+
+                        <option value="pre-pizza-mozzarella" data-price="4.500">Pre-Pizza Mozzarella - $4.500</option>
+                        <option value="pre-pizza-mozzarella-y-jamon" data-price="4.500">Pre-Pizza Mozzarella y Jamón -
+                            $4.500</option>
+                        <option value="tarta-mix-vegetales" data-price="3.500">Tarta Mix Vegetales - $3.500</option>
+                        <option value="tarta-hongos-puerro" data-price="3.500">Tarta Hongos y Puerro - $3.500</option>
+                        <option value="tarta-mozzarella-jamon" data-price="3.500">Tarta Mozzarella y Jamón - $3.500
+                        </option>
+                        <option value="tarta-calabaza" data-price="3.500">Tarta de Calabaza - $3.500</option>
+
+                        <option value="croissant" data-price="5.600">Croissant - $5.600</option>
+                        <option value="medialunas" data-price="4.200">Medialunas - $4.200</option>
+                        <option value="scones-queso" data-price="6.000">Scone de Queso - $6.000</option>
+                        <option value="scones-dulce" data-price="5.400">Scone Dulce - $5.400</option>
+                        <option value="roll-canela" data-price="6.000">Roll de Canela - $6.000</option>
+                        <option value="alfajor-sable-ddl" data-price="4.800">Alfajor Sable DDL - $4.800</option>
+                        <option value="alfajor-chocolate" data-price="4.500">Alfajor de Chocolate - $4.500</option>
+                        <option value="alfajor-maicena" data-price="4.000">Alfajor de Maicena - $4.000</option>
+                        <!-- Agrega más opciones aquí -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+                </div>
+                <button type="button" id="agregar-btn">Agregar al Pedido</button>
+            </form>
+
+            <div class="pedido-resumen">
+                <h2>Resumen del Pedido</h2>
+                <ul id="pedido-lista"></ul>
+                <div id="total">
+                    <strong>Total: $<span id="total-precio">0.00</span></strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Cliente -->
+    <section class="customer-info">
+        <div class="form-container">
+            <h1>Información del Cliente</h1>
+            <form id="cliente-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="button" id="enviar-pedido-btn">Enviar Pedido</button>
+                <p id="error-msg" class="error-msg">Por favor, completa todos los campos antes de continuar.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>
+                <a href="https://www.instagram.com/tiendadepan.arg/" target="_blank" class="footer-link">
+                    <i class="fab fa-instagram"></i> Instagram: @tiendapan
+                </a>
+                <a href="tel:+5491157352191" class="footer-link">
+                    <i class="fas fa-phone"></i> Contacto: +549-11-5735-2191
+                </a>
+                <a href="mailto:contactotiendadepan@gmail.com" class="footer-link">
+                    <i class="fas fa-envelope"></i> Email: contactotiendadepanarg@gmail.com
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="/script.js">
+    </script>
+</body>
+
+</html>

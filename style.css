@@ -1,0 +1,325 @@
+/* General styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que html y body ocupen toda la altura */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
+    overflow-x: hidden; /* Evitar el desbordamiento horizontal */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agregar sombra para mayor visibilidad */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-title {
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+.nav-links a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #097429;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    height: calc(100vh - 60px); /* Ajusta la altura para no cubrir el navbar */
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+    margin-top: 60px; /* Espacio para el navbar fijo */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%; /* Asegura que la imagen cubra toda la sección hero */
+    object-fit: cover; /* Mantiene la proporción de la imagen y cubre el área */
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+}
+
+/* Introduction section styles */
+.intro {
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+/* Form Styles */
+.order-form {
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* Ocupa el espacio restante */
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.pedido-resumen {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pedido-resumen ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pedido-resumen li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.pedido-resumen button.eliminar-btn {
+    background-color: #d9534f;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pedido-resumen button.eliminar-btn:hover {
+    background-color: #c9302c;
+}
+
+#total {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #fff; /* Color del texto de los enlaces */
+    font-weight: bold;
+}
+
+.footer-link i {
+    margin-right: 8px;
+}
+
+.footer-link:hover {
+    color: #097429; /* Color al pasar el ratón por encima */
+}
+
+
+.productos {
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.producto {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    gap: 200px; /* Espacio entre imagen y texto */
+}
+
+.producto img {
+    max-width: 150px; /* Limita el tamaño máximo de la imagen */
+    height: auto;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+.producto-info {
+    flex: 1;
+}
+
+.producto-info h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.producto-info p {
+    margin: 5px 0;
+    color: #666;
+    line-height: 1.5; /* Mejora la legibilidad del texto */
+}
+
+.producto-info span {
+    display: block;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Estilos para el formulario de cliente */
+.customer-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.customer-info .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.customer-info h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.customer-info .form-group {
+    margin-bottom: 15px;
+}
+
+.customer-info .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.customer-info .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.customer-info button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+
+    cursor: pointer;
+}
+
+.customer-info button:hover {
+    background-color: #000000;
+}
+
+.error-msg {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none; /* Ocultar el mensaje por defecto */
+}
