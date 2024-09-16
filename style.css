@@ -119,45 +119,31 @@ body {
         display: flex;
     }
 
- /* Ajusta el tamaño de las imágenes y contenedores */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 50vh; /* Ajusta según tus necesidades */
-    overflow: hidden; /* Evita que el contenido se desborde */
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
-    display: block;
-}
-
-.hero-text {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: calc(100% - 40px); /* Ajusta el ancho para dejar espacio en los bordes */
-    color: white;
-    background: rgba(0, 0, 0, 0.5); /* Mejora la legibilidad */
-    padding: 10px;
-    box-sizing: border-box; /* Incluye padding en el ancho total */
-}
-
-@media (max-width: 768px) {
     .hero {
-        height: 40vh; /* Ajusta la altura en pantallas pequeñas */
+        height: 50vh; /* Ajusta la altura del héroe según lo que necesites en móvil */
+        margin-top: 60px; /* Espacio para el navbar fijo, si es necesario */
+    }
+
+    .hero-image {
+        object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+        width: 100%; /* Asegura que la imagen cubra todo el ancho del contenedor */
+        height: 100%; /* Asegura que la imagen cubra todo el alto del contenedor */
     }
 
     .hero-text {
-        font-size: 0.8em; /* Ajusta el tamaño del texto */
-        bottom: 10px; /* Ajusta el espacio desde el fondo */
-        left: 10px; /* Ajusta el espacio desde la izquierda */
-        width: calc(100% - 20px); /* Ajusta el ancho */
+        font-size: 1em; /* Ajusta el tamaño del texto si es necesario */
+        padding: 10px; /* Ajusta el padding para móviles */
+        background: rgba(0, 0, 0, 0.5); /* Asegúrate de que el texto sea legible */
+    }
+
+    .hero-text h1 {
+        font-size: 1.5em; /* Ajusta el tamaño del título */
+    }
+
+    .hero-text p {
+        font-size: 0.8em; /* Ajusta el tamaño del texto descriptivo */
     }
 }
-
 
 
 /* Hero section styles */
@@ -187,6 +173,16 @@ body {
     text-align: center;
 }
 
+.hero-text h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+}
+
 /* Footer styles */
 .footer {
     background-color: #000;
@@ -201,7 +197,6 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
-    
 }
 
 .footer p {
@@ -301,6 +296,8 @@ button:hover {
     font-size: 18px;
     margin-top: 10px;
 }
+
+
 
 
 .productos {
@@ -405,5 +402,4 @@ button:hover {
     font-size: 14px;
     margin-top: 10px;
     display: none; /* Ocultar el mensaje por defecto */
-}
 }
