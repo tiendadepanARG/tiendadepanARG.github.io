@@ -132,7 +132,6 @@ body {
 
     .hero-text {
         font-size: 1em; /* Ajusta el tamaño del texto si es necesario */
-        padding: 10px; /* Ajusta el padding para móviles */
         background: rgba(0, 0, 0, 0.5); /* Asegúrate de que el texto sea legible */
     }
 
