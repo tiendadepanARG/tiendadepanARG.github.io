@@ -95,8 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
     enviarPedidoBtn.addEventListener('click', enviarPedido);
 });
 
-
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');

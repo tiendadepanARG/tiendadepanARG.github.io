@@ -1,5 +1,4 @@
 /* General styles */
-/* General styles */
 html, body {
     margin: 0;
     padding: 0;
@@ -13,6 +12,7 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
 }
 
 /* Navbar styles */
@@ -27,13 +27,18 @@ body {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* Flex container for navbar */
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-logo {
@@ -92,11 +97,13 @@ body {
         left: 0;
         width: 100%;
         background-color: #000;
+        padding: 10px 0;
     }
 
     .nav-links a {
         margin: 10px 0;
         display: block;
+        text-align: center;
     }
 
     .nav-toggle {
@@ -119,9 +126,9 @@ body {
 /* Hero section styles */
 .hero {
     position: relative;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 60px); /* Ajusta la altura para no cubrir el navbar */
     overflow: hidden;
-    margin-top: 60px;
+    margin-top: 60px; /* Espacio para el navbar fijo */
 }
 
 .hero-image {
@@ -160,7 +167,6 @@ body {
     padding: 20px;
     text-align: center;
     width: 100%;
-    margin-top: auto;
 }
 
 .footer-container {
@@ -188,8 +194,6 @@ body {
 .footer-link:hover {
     color: #097429;
 }
-
-
 
 
 /* Form Styles */
