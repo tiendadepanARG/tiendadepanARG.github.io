@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const total = totalPrecio.textContent;
 
             // Crear el enlace mailto
-            const mailtoLink = `mailto:contactotiendadepan@gmail.com?subject=Nuevo Pedido de ${nombre} ${apellido}&body=Nombre: ${nombre}%0D%0AApellido: ${apellido}%0D%0ATeléfono: ${telefono}%0D%0AEmail: ${email}%0D%0A%0D%0APedido:%0D%0A${productos.join('%0D%0A')}%0D%0A%0D%0ATotal: $${total}`;
+            const mailtoLink = `mailto:contactotiendadepanarg@gmail.com?subject=Nuevo Pedido de ${nombre} ${apellido}&body=Nombre: ${nombre}%0D%0AApellido: ${apellido}%0D%0ATeléfono: ${telefono}%0D%0AEmail: ${email}%0D%0A%0D%0APedido:%0D%0A${productos.join('%0D%0A')}%0D%0A%0D%0ATotal: $${total}`;
 
             // Abrir el cliente de correo
             window.location.href = mailtoLink;
